@@ -16,7 +16,7 @@ $btn2url = get_field('button_2_url');
   <div class="container large-container">
     <div class="text-image-split-wrapper <?php echo $imagePosition; ?>">
       <div class="image">
-        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
+        <img class="lazyload" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
       </div>
       <div class="content">
         <h3 class="overline"><?php echo $overline; ?></h3>

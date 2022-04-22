@@ -12,20 +12,15 @@
         <p><span>T: <?php echo get_field('telephone', 'options'); ?></span><span>E: <?php echo get_field('email', 'options'); ?></span></p>
       </div>
       <div class="socials">
-        <?php if(have_rows('social_links', 'options')) {
-          while(have_rows('social_links', 'options')) {
-            the_row();
-            $logo = get_sub_field('logo');
-            $url = get_sub_field('url');
-            ?>
-            <div class="social-box">
-              <a href="<?php echo $url; ?>"><img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>"></a>
-            </div>
-
-          <?php }
-        } ?>
-
-
+        <div class="social-box">
+          <a href="https://facebook.com/" target="_blank"><?php echo file_get_contents(get_stylesheet_directory_uri(). '/assets/svg/facebook.svg'); ?></a>
+        </div>
+        <div class="social-box">
+          <a href="https://twitter.com/" target="_blank"><?php echo file_get_contents(get_stylesheet_directory_uri(). '/assets/svg/twitter.svg'); ?></a>
+        </div>
+        <div class="social-box">
+          <a href="https://linkedin.com/" target="_blank"><?php echo file_get_contents(get_stylesheet_directory_uri(). '/assets/svg/linkedin.svg'); ?></a>
+        </div>
       </div>
     </div>
   </div>

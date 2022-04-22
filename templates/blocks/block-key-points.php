@@ -10,7 +10,7 @@
 
           <div class="key-points-block">
             <div class="key-points-block--image">
-              <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
+              <img class="lazyload" src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>">
             </div>
             <div class="key-points-block--content">
               <h3><?php echo $title; ?></h3>

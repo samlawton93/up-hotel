@@ -24,6 +24,7 @@ if(!function_exists('uphotel_scripts')) {
     $js_version = $theme_version . '.' . filemtime( get_template_directory() . '/js/theme.min.js' );
     wp_enqueue_script( 'metishealth-scripts', get_template_directory_uri() . '/js/theme.min.js', array(), $js_version, true );
     wp_enqueue_script( 'main', get_template_directory_uri() . '/js/main.js', array(), $js_version, true );
+    wp_enqueue_script( 'lazysizes', get_template_directory_uri() . '/js/lazysizes.min.js', array(), $js_version, true );
     wp_enqueue_script( 'AOS', 'https://unpkg.com/aos@2.3.1/dist/aos.js', array(), $js_version, true );
   }
 }
