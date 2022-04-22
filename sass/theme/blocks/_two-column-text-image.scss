@@ -1,0 +1,120 @@
+.text-image-split {
+  margin: 32px auto 0;
+
+  @include screen-md {
+    margin-top: 96px;
+  }
+
+	&-wrapper {
+		position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1350px;
+    margin: 0 auto;
+
+		@include screen-lg {
+      flex-direction: row;
+    }
+
+
+		&.left {
+			.image {
+				order: 1;
+			}
+			.content {
+				order: 2;
+        padding-right: 0;
+			}
+		}
+		&.right {
+			.image {
+				order: 2;
+			}
+			.content {
+				order: 1;
+        padding-left: 0;
+			}
+		}
+
+		.image {
+      width: 100%;
+
+      @include screen-lg {
+        width: 50%;
+				flex: 0 0 max-content;
+      }
+
+      img {
+        width: 100%;
+      }
+    }
+		.content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 100%;
+      padding-bottom: 35px;
+
+      @include screen-lg {
+        width: 50%;
+        padding: 0 136px;
+				flex: 1;
+      }
+
+      .overline {
+        @extend %s;
+        color: $primary;
+        text-transform: uppercase;
+        font-weight: 700;
+      }
+
+      .heading {
+        @extend %2xl;
+        color: $body;
+        font-weight: 700;
+      }
+
+      .subheading {
+        @extend %l;
+      }
+
+      p {
+        max-width: 75%;
+      }
+
+      .buttons-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        @include screen-md {
+          flex-direction: row;
+        }
+        .outline-button {
+          @extend %outlineButton;
+          margin-bottom: 15px;
+          border-color: $body;
+          color: $body;
+
+          &:hover {
+            border-color: $primary;
+            color: $primary;
+          }
+
+          @include screen-md {
+            margin-bottom: 0;
+            margin-right: 15px;
+          }
+        }
+
+        .secondary-button {
+          @extend %mainButton;
+        }
+      }
+		}
+	}
+}

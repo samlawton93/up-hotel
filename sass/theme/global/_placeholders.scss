@@ -1,0 +1,208 @@
+html,
+body {
+	margin: 0;
+}
+
+%padding {
+	padding: 24px 0 42px 0;
+
+	@include screen-lg {
+		padding-top: 84px;
+		padding-bottom: 84px;
+	}
+}
+
+%backgroundImage {
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+%overlay {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	transition: all 0.25s ease-in-out;
+}
+
+%xs {
+	@extend %fontRegular;
+	font-size: 10px;
+
+	@include screen-md {
+		font-size: 12px;
+	}
+}
+%s {
+	@extend %fontRegular;
+	font-size: 12px;
+
+	@include screen-md {
+		font-size: 14px;
+	}
+}
+%m {
+	@extend %fontRegular;
+	font-size: 14px;
+
+	@include screen-md {
+		font-size: 16px;
+	}
+}
+%l {
+	@extend %fontRegular;
+	font-size: 18px;
+
+	@include screen-md {
+		font-size: 21px;
+	}
+}
+%xl {
+	@extend %fontRegular;
+	font-size: 22px;
+
+	@include screen-md {
+		font-size: 28px;
+	}
+}
+%2xl {
+	@extend %fontRegular;
+	font-size: 27px;
+
+	@include screen-md {
+		font-size: 38px;
+	}
+}
+%3xl {
+	@extend %fontRegular;
+	font-size: 34px;
+
+	@include screen-md {
+		font-size: 51px;
+	}
+}
+
+
+%smallSizes {
+	@extend %fontRegular;
+	font-size: 14px;
+
+	@include screen-xl {
+		font-size: 16px;
+	}
+	@include big-screen {
+		font-size: 18px;
+	}
+}
+
+%largeSizes {
+	@extend %fontRegular;
+	font-weight: 400;
+	font-size: 16px;
+
+	@include screen-xl {
+		font-size: 18px;
+	}
+	@include big-screen {
+		font-size: 24px;
+	}
+}
+
+%h1 {
+	font-size: 34px;
+	line-height: normal;
+	@extend %fontHeading;
+	color: $body;
+	margin-bottom: 20px;
+
+	@include screen-md {
+		font-size: 51px;
+	}
+	// @include screen-lg {
+	// 	font-size: 54px;
+	// }
+	// @include screen-xl {
+	// 	font-size: 63px;
+	// }
+	// @include big-screen {
+	// 	font-size: 72px;
+	// }
+}
+
+%h2 {
+	color: $body;
+	font-size: 27px;
+	line-height: normal;
+	@extend %fontHeading;
+
+	@include screen-md {
+		font-size: 38px;
+	}
+	// @include screen-lg {
+	// 	font-size: 30px;
+	// }
+	// @include screen-xl {
+	// 	font-size: 33px;
+	// }
+	// @include big-screen {
+	// 	font-size: 36px;
+	// }
+}
+
+%content {
+	@extend %fontRegular;
+	@extend %m;
+}
+
+%mainButton {
+	display: inline-block;
+	@extend %fontRegular;
+	color: $background;
+	background: $primary;
+	border: none;
+	border-radius: 9999px;
+	@extend %m;
+	padding: 12px 24px;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		background: #5E7940;
+		text-decoration: none;
+	}
+}
+%secondaryButton {
+	display: inline-block;
+	@extend %fontRegular;
+	color: $body;
+	background: $background;
+	border: 1px solid $body;
+	border-radius: 9999px;
+	@extend %m;
+	padding: 12px 24px;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		color: #5E7940;
+		border-color: #5E7940;
+		text-decoration: none;
+	}
+}
+%outlineButton {
+	display: inline-block;
+	@extend %fontRegular;
+	color: $background;
+	background: transparent;
+	border: 1px solid $background;
+	border-radius: 9999px;
+	@extend %m;
+	padding: 12px 24px;
+	transition: all 0.3s ease-in-out;
+
+	&:hover {
+		color: $backgroundAlt;
+		border-color: $backgroundAlt;
+		text-decoration: none;
+	}
+}

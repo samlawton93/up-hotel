@@ -1,0 +1,69 @@
+.container {
+	max-width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	@include screen-sm {
+		max-width: 540px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@include screen-md {
+		max-width: 720px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@include screen-lg {
+		max-width: 960px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	@include screen-xl {
+		max-width: 1140px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.large-container {
+	@include big-screen {
+		max-width: 1640px;
+	}
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+	margin-top: 0;
+	margin-bottom: .5rem;
+	line-height: 1.2;
+}
+
+p {
+	@extend %content;
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+a {
+	color: $primary;
+	text-decoration: none;
+	background-color: transparent;
+
+	&:hover {
+		color: darken($primary, 10%);
+	}
+}
+
+.desktop-only-image {
+	display: none;
+
+	@include screen-lg {
+		display: block;
+	}
+}
+.mobile-only-image {
+	display: block;
+
+	@include screen-lg {
+		display: none;
+	}
+}

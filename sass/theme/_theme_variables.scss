@@ -1,0 +1,38 @@
+//
+// Colours
+$body : #000410;
+$background: #FFFFFF;
+$backgroundAlt: #F2F2F3;
+$primary: #294D00;
+$reverse: #FFFFFF;
+
+$success: #4CC27B;
+$warning: #EEBE43;
+$error: #DE3C4B;
+
+
+
+//
+// Typography
+
+
+//
+// Miscellanious
+@mixin screen-xs {
+  @media only screen and (min-width: 0px) { @content; }
+}
+@mixin screen-sm {
+  @media only screen and (min-width: 576px) { @content; }
+}
+@mixin screen-md {
+  @media only screen and (min-width: 768px) { @content; }
+}
+@mixin screen-lg {
+  @media only screen and (min-width: 992px) { @content; }
+}
+@mixin screen-xl {
+  @media only screen and (min-width: 1200px) { @content; }
+}
+@mixin big-screen {
+    @media only screen and (min-width: 1920px) { @content; }
+}

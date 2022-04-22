@@ -1,0 +1,23 @@
+/*
+  Do not put any code inside this file! It will become very messy.
+  Instead, create new SASS files in various subfolders which you
+  then import into this file using '@import "folder/file";'
+*/
+
+// Global
+@import "global/global";
+@import "global/fonts";
+@import "global/placeholders";
+
+// Layout
+@import "layout/header";
+@import "layout/footer";
+
+// Components
+@import "components/nav";
+
+//Blocks
+@import "blocks/hero";
+@import "blocks/two-column-text-image";
+@import "blocks/key-points";
+@import "blocks/featured-cta";

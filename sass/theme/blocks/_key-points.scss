@@ -1,0 +1,39 @@
+.key-points {
+  margin: 32px auto 0;
+
+  @include screen-md {
+    margin-top: 96px;
+  }
+
+	&-wrapper {
+		position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 25px;
+    max-width: 1350px;
+    margin: 0 auto;
+
+		@include screen-lg {
+      grid-template-columns: repeat(3, 1fr);
+      grid-row-gap: 77px;
+    }
+
+    .key-points-block {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-direction: row;
+
+      &--image {
+        margin-right: 37px;
+      }
+
+      &--content {
+        h3 {
+          @extend %l;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+}
